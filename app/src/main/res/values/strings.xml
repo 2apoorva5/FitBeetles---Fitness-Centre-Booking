@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">FitBeetles</string>
+    <string name="web_client_id">733120319469-rbuhgo46m3j1e19rmedboq6l3gmjsfqm.apps.googleusercontent.com</string>
+    <string name="web_client_secret">3CpT9UgrhuItwCJJDI8DAUqJ</string>
+    <string name="facebook_application_id" translatable="false">938339043173435</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb938339043173435</string>
+    <string name="facebook_app_secret">d8e879280f231284c13a30a3044dd7ee</string>
+
+    <string name="ForHomeTitle">FitBeetles</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ForProfileTitle">Profile</string>
+    <string name="ForExploreTitle">Explore</string>
+    <string name="ForShopTitle">Shop</string>
+    <string name="ForInboxTitle">Inbox</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="sampleText">Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text</string>
+</resources>

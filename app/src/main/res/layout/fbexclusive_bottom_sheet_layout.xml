@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view"
+        android:layout_width="35dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="#B1BED5"
+        app:cardCornerRadius="5dp"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/fb_exclusive"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="EXPERIENCE FITNESS LIKE NEVER BEFORE"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/textColorOnLightPrimary"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fb_exclusive" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:text="Not a Membership, Not a Pass - Even Better!"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:background="#f1f0cf"
+        app:layout_constraintTop_toBottomOf="@id/textView13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Revolutionizing Fitness By Making it Simple and Pocket-Friendly"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/textColorOnLightPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/money_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/money_explanation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/money_text" />
+
+    <TextView
+        android:id="@+id/money_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/poppins"
+        android:text="Money Saver"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/textColorOnLightSecondary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/money_image"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <TextView
+        android:id="@+id/money_explanation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Pay only for the days and sessions you workout."
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/textColorOnLightPrimary"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/money_text"
+        app:layout_constraintStart_toEndOf="@+id/money_image"
+        app:layout_constraintTop_toBottomOf="@+id/money_text" />
+
+    <ImageView
+        android:id="@+id/easy_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/easy_explanation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/easy_text" />
+
+    <TextView
+        android:id="@+id/easy_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/poppins"
+        android:text="Super Easy"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/textColorOnLightSecondary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/easy_image"
+        app:layout_constraintTop_toBottomOf="@+id/money_explanation" />
+
+    <TextView
+        android:id="@+id/easy_explanation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Book, Renew, Reschedule, Cancel-on-the-go."
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/textColorOnLightPrimary"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/easy_text"
+        app:layout_constraintStart_toEndOf="@+id/easy_image"
+        app:layout_constraintTop_toBottomOf="@+id/easy_text" />
+
+    <ImageView
+        android:id="@+id/access_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/access_explanation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/access_text" />
+
+    <TextView
+        android:id="@+id/access_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/poppins"
+        android:text="Unlimited Access"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/textColorOnLightSecondary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/access_image"
+        app:layout_constraintTop_toBottomOf="@+id/easy_explanation" />
+
+    <TextView
+        android:id="@+id/access_explanation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Book at the same Gyms/Studios multiple times."
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/textColorOnLightPrimary"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/access_text"
+        app:layout_constraintStart_toEndOf="@+id/access_image"
+        app:layout_constraintTop_toBottomOf="@+id/access_text" />
+
+    <ImageView
+        android:id="@+id/addicted_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/addicted_explanation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addicted_text" />
+
+    <TextView
+        android:id="@+id/addicted_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/poppins"
+        android:text="Get Addicted"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/textColorOnLightSecondary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addicted_image"
+        app:layout_constraintTop_toBottomOf="@+id/access_explanation" />
+
+    <TextView
+        android:id="@+id/addicted_explanation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Book, Burn and Get Rewarded on Every Workout."
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/textColorOnLightPrimary"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/addicted_text"
+        app:layout_constraintStart_toEndOf="@+id/addicted_image"
+        app:layout_constraintTop_toBottomOf="@+id/addicted_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

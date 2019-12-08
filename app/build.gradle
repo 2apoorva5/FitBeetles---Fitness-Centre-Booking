@@ -1,0 +1,121 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.services.fitbeetles"
+        minSdkVersion 21
+        targetSdkVersion 29
+        multiDexEnabled true
+        versionCode 1
+        versionName "1.0"
+        resConfig "en"
+        resValue "string", "google_maps_key",
+                (project.findProperty("GOOGLE_MAPS_API_KEY") ?: "")
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+
+    //Added Facebook Libraries ------->>>>
+    //Facebook Login
+    implementation 'com.facebook.android:facebook-android-sdk:5.1.1'
+    //Facebook Share
+    implementation 'com.facebook.android:facebook-share:5.1.1'
+
+
+    //Added Firebase Libraries ------->>>>
+    //Firebase Analytics
+    implementation 'com.google.firebase:firebase-core:17.2.1'
+    //Firebase Authentication
+    implementation 'com.google.firebase:firebase-auth:19.1.0'
+    //Firebase Cloud Firestore
+    implementation 'com.google.firebase:firebase-firestore:21.3.0'
+    //Firebase Realtime Database
+    implementation 'com.google.firebase:firebase-database:19.2.0'
+    //Firebase Cloud Storage
+    implementation 'com.google.firebase:firebase-storage:19.1.0'
+    //Firebase Cloud Messaging
+    implementation 'com.google.firebase:firebase-messaging:20.0.1'
+
+
+    //Added FirebaseUI Libraries ------->>>>
+    // FirebaseUI for Firebase Auth
+    implementation 'com.firebaseui:firebase-ui-auth:5.0.0'
+    // FirebaseUI for Firebase Firestore
+    implementation 'com.firebaseui:firebase-ui-firestore:5.0.0'
+
+
+    //Google Play Libraries
+    implementation 'com.google.android.libraries.places:places:2.1.0'
+    implementation 'com.google.android.gms:play-services-plus:17.0.0'
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.google.android.gms:play-services-base:17.1.0'
+    implementation 'com.google.android.gms:play-services-identity:17.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-gcm:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-nearby:17.0.0'
+    implementation name: 'maps-sdk-3.0.0-beta', ext: 'aar'
+    implementation 'com.android.support:support-v4:+'
+    implementation 'com.android.support:appcompat-v7:+'
+    implementation 'com.google.android.gms:play-services-basement:17.1.1'
+
+
+    //Additional Third-Party Libraries
+    implementation 'com.github.andremion:counterfab:1.0.1'
+    implementation 'com.github.mancj:MaterialSearchBar:0.8.2'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation 'com.cepheuen.elegant-number-button:lib:1.0.2'
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:2.0.1'
+    implementation 'com.tapadoo.android:alerter:2.0.4'
+    implementation 'com.github.ybq:Android-SpinKit:1.2.0'
+    implementation 'commons-io:commons-io:2.4'
+    implementation 'com.jaredrummler:material-spinner:1.3.1'
+    implementation 'com.stepstone.apprating:app-rating:2.0.0'
+    implementation 'com.nex3z:notification-badge:1.0.2'
+    implementation 'com.github.firdausmaulan:GlideSlider:1.4.0'
+    implementation 'com.github.ApendIr:slider:1.0'
+    implementation 'com.ss.bannerslider:bannerslider:2.0.0'
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
+    implementation 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:2.3.0'
+    implementation 'com.facebook.shimmer:shimmer:0.4.0'
+    implementation 'com.github.hajiyevelnur92:intentanimation:1.0'
+    implementation 'com.github.ome450901:SimpleRatingBar:1.4.3'
+    implementation 'com.karumi:dexter:6.0.0'
+    implementation 'com.github.matecode:Snacky:1.1.4'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.airbnb.android:lottie:3.0.7'
+    implementation 'com.github.smarteist:autoimageslider:1.3.2'
+    implementation 'devs.mulham.horizontalcalendar:horizontalcalendar:1.3.4'
+
+
+    //Retrofit Libraries
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+}
+
+apply plugin: 'com.google.gms.google-services'

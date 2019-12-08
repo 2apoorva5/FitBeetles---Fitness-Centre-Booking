@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "733120319469",
+    "firebase_url": "https://fitbeetles-210597.firebaseio.com",
+    "project_id": "fitbeetles-210597",
+    "storage_bucket": "fitbeetles-210597.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733120319469:android:5c0bbf3545b1619b",
+        "android_client_info": {
+          "package_name": "com.services.fitbeetles"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733120319469-7t4ac17irdmu4ci9qtps3hloppbr6vrt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.services.fitbeetles",
+            "certificate_hash": "c5256d513cb59156fe1f8eda61091e3d2b6fcbab"
+          }
+        },
+        {
+          "client_id": "733120319469-rbuhgo46m3j1e19rmedboq6l3gmjsfqm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7vkstVOrmGFCJXJ13euOC1VyHcEgZCqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733120319469-rbuhgo46m3j1e19rmedboq6l3gmjsfqm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

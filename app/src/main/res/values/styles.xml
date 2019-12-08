@@ -1,0 +1,94 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowDisablePreview">true</item>
+
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+
+    <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+
+    <style name="ForLogin" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryForLogin</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkForLogin</item>
+        <item name="colorAccent">@color/colorAccentForLogin</item>
+        <item name="colorControlNormal">@color/colorControlNormalForLogin</item>
+        <item name="colorControlActivated">@color/colorControlActivatedForLogin</item>
+        <item name="colorControlHighlight">@color/colorControlHighlightForLogin</item>
+        <item name="colorError">@color/colorErrorForLogin</item>
+        <item name="android:textColor">@color/textColorForLogin</item>
+        <item name="android:buttonStyle">@style/TextForButtonLogin</item>
+        <item name="android:editTextStyle">@style/EditTextForLogin</item>
+        <item name="android:windowBackground">@color/windowBackgroundForLogin</item>
+    </style>
+
+
+    <style name="TextForButtonLogin" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textColor">@color/textColorForButtonLogin</item>
+    </style>
+
+
+    <style name="EditTextForLogin" parent="FirebaseUI.TextInputEditText">
+        <item name="android:editTextColor">@color/editTextColorForLogin</item>
+        <item name="android:colorControlNormal">@color/colorControlNormalForLogin</item>
+        <item name="android:colorControlActivated">@color/colorControlNormalForLogin</item>
+        <item name="android:textColor">@color/editTextColorForLogin</item>
+    </style>
+
+
+    <style name="BottomNavigationItemText" parent="TextAppearance">
+        <item name="android:fontFamily">@font/comfortaa_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+
+    <style name="AddToBookmarkAlert" parent="TextAppearance">
+        <item name="android:textColor">@color/textColorOnLightPrimary</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+
+    <style name="RemoveFromBookmarkAlert" parent="TextAppearance">
+        <item name="android:textColor">@color/textColorOnDarkPrimary</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+    
+    
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_bg</item>
+    </style>
+
+</resources>

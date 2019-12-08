@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#004D61</color>
+    <color name="colorPrimaryDark">#004D61</color>
+    <color name="colorPrimaryLight">#8bbabb</color>
+    <color name="colorAccent">#ff502f</color>
+
+    <color name="creativeColor">#EFF1FE</color>
+    <color name="viewColor">#c8e6f5</color>
+    <color name="viewColor2">#b1bed5</color>
+
+    <color name="errorColor">#B71C1C</color>
+
+    <color name="bookmarkColor">#f7b71d</color>
+    <color name="ratingBarColor">#f7b71d</color>
+    <color name="ratingBarColorPositive">#42b883</color>
+    <color name="ratingBarColorAverage">#f7b71d</color>
+    <color name="ratingBarColorNegative">#ff502f</color>
+    <color name="facilityOn">#000000</color>
+    <color name="facilityOff">#b1bed5</color>
+
+    <color name="detailsDotColor1">#ffffff</color>
+    <color name="detailsDotColor2">#4592af</color>
+
+    <color name="textColorOnDarkPrimary">#FFFFFF</color>
+    <color name="textColorOnDarkSecondary">#8bbabb</color>
+    <color name="textColorOnLightPrimary">#000000</color>
+    <color name="textColorOnLightSecondary">#004D61</color>
+    <color name="dotsIndicator">#4592af</color>
+
+    <color name="colorPrimaryForLogin">#004D61</color>
+    <color name="colorPrimaryDarkForLogin">#004D61</color>
+    <color name="colorAccentForLogin">#ff502f</color>
+    <color name="colorControlNormalForLogin">#ff502f</color>
+    <color name="colorControlActivatedForLogin">#004D61</color>
+    <color name="colorControlHighlightForLogin">#FFFFFF</color>
+    <color name="colorErrorForLogin">#B71C1C</color>
+    <color name="textColorForLogin">#000000</color>
+    <color name="editTextColorForLogin">#000000</color>
+    <color name="textColorForButtonLogin">#FFFFFF</color>
+    <color name="windowBackgroundForLogin">#FFFFFF</color>
+
+</resources>
