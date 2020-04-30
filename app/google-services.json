@@ -15,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "733120319469-7t4ac17irdmu4ci9qtps3hloppbr6vrt.apps.googleusercontent.com",
+          "client_id": "733120319469-p1toaqvlrskr8j5660pgadhto8mnee5m.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.services.fitbeetles",
-            "certificate_hash": "c5256d513cb59156fe1f8eda61091e3d2b6fcbab"
+            "certificate_hash": "ac2c98b7df13c7db35df6c311d33b433130677d7"
           }
         },
         {
@@ -29,7 +29,7 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC7vkstVOrmGFCJXJ13euOC1VyHcEgZCqA"
+          "current_key": "AIzaSyBSAexBfrLjTIxefAtmGRgaoOWJVk3n7H0"
         }
       ],
       "services": {

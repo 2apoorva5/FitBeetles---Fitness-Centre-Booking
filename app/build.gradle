@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    buildToolsVersion "29.0.3"
     defaultConfig {
         applicationId "com.services.fitbeetles"
         minSdkVersion 21
@@ -28,32 +28,34 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.google.android.material:material:1.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
 
     //Added Facebook Libraries ------->>>>
-    //Facebook Login
+    //Facebook SDK
     implementation 'com.facebook.android:facebook-android-sdk:5.1.1'
+    //Facebook login
+    implementation 'com.facebook.android:facebook-login:5.1.1'
     //Facebook Share
     implementation 'com.facebook.android:facebook-share:5.1.1'
 
 
     //Added Firebase Libraries ------->>>>
     //Firebase Analytics
-    implementation 'com.google.firebase:firebase-core:17.2.1'
+    implementation 'com.google.firebase:firebase-core:17.4.0'
     //Firebase Authentication
-    implementation 'com.google.firebase:firebase-auth:19.1.0'
+    implementation 'com.google.firebase:firebase-auth:19.3.1'
     //Firebase Cloud Firestore
-    implementation 'com.google.firebase:firebase-firestore:21.3.0'
+    implementation 'com.google.firebase:firebase-firestore:21.4.3'
     //Firebase Realtime Database
-    implementation 'com.google.firebase:firebase-database:19.2.0'
+    implementation 'com.google.firebase:firebase-database:19.3.0'
     //Firebase Cloud Storage
-    implementation 'com.google.firebase:firebase-storage:19.1.0'
+    implementation 'com.google.firebase:firebase-storage:19.1.1'
     //Firebase Cloud Messaging
-    implementation 'com.google.firebase:firebase-messaging:20.0.1'
+    implementation 'com.google.firebase:firebase-messaging:20.1.6'
 
 
     //Added FirebaseUI Libraries ------->>>>
@@ -64,19 +66,17 @@ dependencies {
 
 
     //Google Play Libraries
-    implementation 'com.google.android.libraries.places:places:2.1.0'
+    implementation 'com.google.android.libraries.places:places:2.2.0'
     implementation 'com.google.android.gms:play-services-plus:17.0.0'
-    implementation 'com.google.android.gms:play-services-auth:17.0.0'
-    implementation 'com.google.android.gms:play-services-base:17.1.0'
+    implementation 'com.google.android.gms:play-services-auth:18.0.0'
+    implementation 'com.google.android.gms:play-services-base:17.2.1'
     implementation 'com.google.android.gms:play-services-identity:17.0.0'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
     implementation 'com.google.android.gms:play-services-gcm:17.0.0'
     implementation 'com.google.android.gms:play-services-location:17.0.0'
     implementation 'com.google.android.gms:play-services-nearby:17.0.0'
     implementation name: 'maps-sdk-3.0.0-beta', ext: 'aar'
-    implementation 'com.android.support:support-v4:+'
-    implementation 'com.android.support:appcompat-v7:+'
-    implementation 'com.google.android.gms:play-services-basement:17.1.1'
+    implementation 'com.google.android.gms:play-services-basement:17.2.1'
 
 
     //Additional Third-Party Libraries
@@ -84,8 +84,8 @@ dependencies {
     implementation 'com.github.mancj:MaterialSearchBar:0.8.2'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
-    implementation 'com.github.bumptech.glide:glide:4.8.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     implementation 'com.cepheuen.elegant-number-button:lib:1.0.2'
     implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
     implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:2.0.1'
@@ -106,9 +106,7 @@ dependencies {
     implementation 'com.github.ome450901:SimpleRatingBar:1.4.3'
     implementation 'com.karumi:dexter:6.0.0'
     implementation 'com.github.matecode:Snacky:1.1.4'
-    implementation 'com.google.android.material:material:1.0.0'
-    implementation 'com.airbnb.android:lottie:3.0.7'
-    implementation 'com.github.smarteist:autoimageslider:1.3.2'
+    implementation 'com.airbnb.android:lottie:3.4.0'
     implementation 'devs.mulham.horizontalcalendar:horizontalcalendar:1.3.4'
 
 
