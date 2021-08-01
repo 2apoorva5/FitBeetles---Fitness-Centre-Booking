@@ -95,23 +95,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/name" />
 
-            <RatingBar
-                android:id="@+id/rating_bar"
-                style="@style/Widget.AppCompat.RatingBar.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:numStars="5"
-                android:progressBackgroundTint="#B1BED5"
-                android:progressTint="@color/ratingBarColor"
-                android:rating="4.5"
-                android:stepSize="0.1"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="@+id/reviews"
-                app:layout_constraintStart_toEndOf="@+id/reviews"
-                app:layout_constraintTop_toTopOf="@+id/reviews"
-                tools:visibility="visible" />
-
             <TextView
                 android:id="@+id/name"
                 android:layout_width="0dp"
@@ -146,6 +129,23 @@
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/name"
+                tools:visibility="visible" />
+
+            <RatingBar
+                android:id="@+id/rating_bar"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:numStars="5"
+                android:progressBackgroundTint="#B1BED5"
+                android:progressTint="@color/ratingBarColor"
+                android:rating="4.5"
+                android:stepSize="0.1"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/reviews"
+                app:layout_constraintStart_toEndOf="@+id/reviews"
+                app:layout_constraintTop_toTopOf="@+id/reviews"
                 tools:visibility="visible" />
 
             <TextView

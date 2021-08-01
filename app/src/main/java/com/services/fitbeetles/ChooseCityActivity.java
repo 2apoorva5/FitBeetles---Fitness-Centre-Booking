@@ -1,13 +1,5 @@
 package com.services.fitbeetles;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -25,21 +17,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.view.animation.LayoutAnimationController;
 import android.view.animation.ScaleAnimation;
 import android.widget.EditText;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.facebook.shimmer.ShimmerFrameLayout;
-import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
-import com.firebase.ui.firestore.FirestoreRecyclerOptions;
-import com.github.ybq.android.spinkit.style.ThreeBounce;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -68,7 +60,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import de.mateware.snacky.Snacky;
 import maes.tech.intentanim.CustomIntent;
 import pl.droidsonroids.gif.GifImageView;
 
@@ -119,8 +110,7 @@ public class ChooseCityActivity extends AppCompatActivity implements ICityLoadLi
         citySearch = findViewById(R.id.city_search);
         textToSpeech = findViewById(R.id.text_to_speech);
 
-        if(firebaseUser == null)
-        {
+        if (firebaseUser == null) {
             Intent intent1 = new Intent(ChooseCityActivity.this, LoginActivity.class);
             startActivity(intent1);
             CustomIntent.customType(ChooseCityActivity.this, "right-to-left");
@@ -140,10 +130,8 @@ public class ChooseCityActivity extends AppCompatActivity implements ICityLoadLi
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if(task.isSuccessful())
-                        {
-                            for(QueryDocumentSnapshot citySnapshot : task.getResult())
-                            {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot citySnapshot : task.getResult()) {
                                 Cities city = citySnapshot.toObject(Cities.class);
                                 citiesList.add(city);
                             }
@@ -173,7 +161,7 @@ public class ChooseCityActivity extends AppCompatActivity implements ICityLoadLi
 
                 try {
                     startActivityForResult(intent, 123);
-                }catch (ActivityNotFoundException e) {
+                } catch (ActivityNotFoundException e) {
                     Alerter.create(ChooseCityActivity.this)
                             .setTitle("ERROR!")
                             .setTextAppearance(R.style.RemoveFromBookmarkAlert)
@@ -191,14 +179,11 @@ public class ChooseCityActivity extends AppCompatActivity implements ICityLoadLi
         citySearch.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean hasFocus) {
-                if(hasFocus)
-                {
+                if (hasFocus) {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                         cityGif.setForeground(new ColorDrawable(Color.parseColor("#80004d61")));
                     }
-                }
-                else
-                {
+                } else {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                         cityGif.setForeground(new ColorDrawable(Color.parseColor("#00000000")));
                     }
@@ -226,12 +211,9 @@ public class ChooseCityActivity extends AppCompatActivity implements ICityLoadLi
         KeyboardVisibilityEvent.setEventListener(ChooseCityActivity.this, new KeyboardVisibilityEventListener() {
             @Override
             public void onVisibilityChanged(boolean isOpen) {
-                if(isOpen)
-                {
+                if (isOpen) {
                     UIUtil.showKeyboard(ChooseCityActivity.this, citySearch);
-                }
-                else
-                {
+                } else {
                     citySearch.clearFocus();
                 }
             }
@@ -242,11 +224,9 @@ public class ChooseCityActivity extends AppCompatActivity implements ICityLoadLi
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        switch (requestCode)
-        {
-            case 123 :
-                if(resultCode == RESULT_OK && data != null)
-                {
+        switch (requestCode) {
+            case 123:
+                if (resultCode == RESULT_OK && data != null) {
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     citySearch.setText(result.get(0));
                     citySearch.clearFocus();
@@ -257,8 +237,7 @@ public class ChooseCityActivity extends AppCompatActivity implements ICityLoadLi
 
     @Override
     public void onCityLoadSuccess(List<Cities> cities) {
-        if ((shimmerLayout.getVisibility() == View.VISIBLE))
-        {
+        if ((shimmerLayout.getVisibility() == View.VISIBLE)) {
             shimmerLayout.stopShimmer();
             shimmerLayout.setVisibility(View.GONE);
         }
@@ -287,8 +266,7 @@ public class ChooseCityActivity extends AppCompatActivity implements ICityLoadLi
                 .show();
     }
 
-    public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> implements Filterable
-    {
+    public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> implements Filterable {
         Context context;
         List<Cities> mData;
         NewFilter filter;
@@ -339,12 +317,10 @@ public class ChooseCityActivity extends AppCompatActivity implements ICityLoadLi
                             .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                                 @Override
                                 public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                                    if(task.isSuccessful())
-                                    {
+                                    if (task.isSuccessful()) {
                                         final DocumentSnapshot userSnapShot = task.getResult();
                                         final User user = new User(name, image, email, city, mobile, about, gender, dob, work, language);
-                                        if(!userSnapShot.exists())
-                                        {
+                                        if (!userSnapShot.exists()) {
                                             userRef.document(email)
                                                     .set(user)
                                                     .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -372,9 +348,7 @@ public class ChooseCityActivity extends AppCompatActivity implements ICityLoadLi
                                                             .show();
                                                 }
                                             });
-                                        }
-                                        else
-                                        {
+                                        } else {
                                             userRef.document(email)
                                                     .update("city", city)
                                                     .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -412,10 +386,8 @@ public class ChooseCityActivity extends AppCompatActivity implements ICityLoadLi
             setAnimation(holder.itemView, position);
         }
 
-        public void setAnimation(View viewToAnimate, int position)
-        {
-            if(position > LAST_POSITION)
-            {
+        public void setAnimation(View viewToAnimate, int position) {
+            if (position > LAST_POSITION) {
                 ScaleAnimation scaleAnimation = new ScaleAnimation(0.0f, 1.0f, 0.0f, 1.0f,
                         Animation.RELATIVE_TO_SELF, 0.5f,
                         Animation.RELATIVE_TO_SELF, 0.5f);
@@ -437,7 +409,7 @@ public class ChooseCityActivity extends AppCompatActivity implements ICityLoadLi
         }
 
 
-        public class MyViewHolder extends RecyclerView.ViewHolder{
+        public class MyViewHolder extends RecyclerView.ViewHolder {
 
             ConstraintLayout clickListener;
             ImageView cityImage;
@@ -452,10 +424,10 @@ public class ChooseCityActivity extends AppCompatActivity implements ICityLoadLi
             }
         }
 
-        public class NewFilter extends Filter
-        {
+        public class NewFilter extends Filter {
             public CityAdapter mAdapter;
-            public NewFilter(CityAdapter mAdapter){
+
+            public NewFilter(CityAdapter mAdapter) {
                 super();
                 this.mAdapter = mAdapter;
             }
@@ -464,15 +436,12 @@ public class ChooseCityActivity extends AppCompatActivity implements ICityLoadLi
             protected FilterResults performFiltering(CharSequence charSequence) {
                 cities.clear();
                 final FilterResults results = new FilterResults();
-                if(charSequence == null || charSequence.length() == 0){
+                if (charSequence == null || charSequence.length() == 0) {
                     cities.addAll(citiesList);
-                }
-                else {
+                } else {
                     final String filterPattern = charSequence.toString().toLowerCase().trim();
-                    for(Cities filteredCity : citiesList)
-                    {
-                        if(filteredCity.getName().toLowerCase().trim().contains(filterPattern))
-                        {
+                    for (Cities filteredCity : citiesList) {
+                        if (filteredCity.getName().toLowerCase().trim().contains(filterPattern)) {
                             cities.add(filteredCity);
                         }
                     }
